@@ -1,7 +1,8 @@
 class Cloudbit < ActiveRecord::Base
-  has_attached_file :file #, storage: :s3, s3_credentials: Proc.new{ |a| a.instance.s3_crentials }
+  has_attached_file :file #, storage: :s3, s3_credentials: Proc.new{ |a| a.instance.s3_credentials }
 
-  validates :file, attachment_presence: true
+  validates_attachment :file, presence: true, 
+    content_type: { content_type: ['image/jpeg', 'image/gif', 'image/png', 'text/plain', 'application/pdf', 'text/html'] }
 
   # def s3_credentials
   #   {
