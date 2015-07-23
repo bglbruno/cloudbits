@@ -6,7 +6,7 @@ class CloudbitsController < ApplicationController
 
   def download
     @cloudbit = Cloudbit.find(params[:cloudbit_id])
-    send_file @cloudbit.file.path
+    redirect_to @cloudbit.file.url
   end
 
   def new

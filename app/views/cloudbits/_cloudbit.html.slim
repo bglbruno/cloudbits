@@ -3,7 +3,7 @@ tr
     span.badge
       = number_to_human_size cloudbit.file_file_size
   td
-    = link_to cloudbit.file_file_name, cloudbit_download_path(cloudbit)
+    = link_to cloudbit.file_file_name, cloudbit_download_path(cloudbit), target: :blank
   td
     span.label.label-default
       = cloudbit.file_content_type
