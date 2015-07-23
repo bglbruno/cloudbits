@@ -11,6 +11,9 @@ html
       .page-header
         h1
           = link_to t('app.name'), root_path
+      - if flash[:notice]
+        .alert.alert-info
+          = flash[:notice]
       .panel.panel-defaul
         .panel-body
           = yield

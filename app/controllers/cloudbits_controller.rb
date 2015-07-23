@@ -17,7 +17,7 @@ class CloudbitsController < ApplicationController
     @cloudbit = Cloudbit.new(cloudbit_params)
 
     if @cloudbit.save
-      redirect_to root_path, notice: 'Cloudbit was successfully created.'
+      redirect_to root_path, notice: I18n.t(:success, scope: :messages)
     else
       render :new
     end
@@ -27,7 +27,7 @@ class CloudbitsController < ApplicationController
     @cloudbit = Cloudbit.find(params[:id])
     @cloudbit.file = nil
     @cloudbit.destroy
-    redirect_to cloudbits_url, notice: 'Cloudbit was successfully destroyed.'
+    redirect_to cloudbits_url, notice: I18n.t(:destroy, scope: :messages)
   end
 
   private

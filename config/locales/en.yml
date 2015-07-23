@@ -4,6 +4,9 @@ en:
   are_you_sure: 'Are you sure?'
   bt:
     destroy: 'Delete'
+  messages:
+    success: 'Success!'
+    destroy: 'File destroyed!'
   cloudbits:
     new:
       title: 'Upload a file'
