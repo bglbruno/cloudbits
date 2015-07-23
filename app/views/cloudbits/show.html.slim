@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @cloudbit.name
+
+= link_to 'Edit', edit_cloudbit_path(@cloudbit)
+'|
+= link_to 'Back', cloudbits_path

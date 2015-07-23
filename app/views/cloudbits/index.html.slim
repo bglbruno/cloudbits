@@ -1,0 +1,21 @@
+h1 Listing cloudbits
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @cloudbits.each do |cloudbit|
+      tr
+        td = cloudbit.name
+        td = link_to 'Show', cloudbit
+        td = link_to 'Edit', edit_cloudbit_path(cloudbit)
+        td = link_to 'Destroy', cloudbit, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Cloudbit', new_cloudbit_path
