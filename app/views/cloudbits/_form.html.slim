@@ -1,8 +1,10 @@
-= simple_form_for(@cloudbit) do |f|
-  = f.error_notification
+.panel.panel-default
+  .panel-body
+    = simple_form_for(@cloudbit) do |f|
+      = f.error_notification
 
-  .form-inputs
-    = f.input :file, as: :file
+      .form-inputs.upload
+        = f.input :file, as: :file, label: false
 
-  .form-actions
-    = f.button :submit
+      .form-actions
+        = f.button :submit, t('.upload'), class: 'btn btn-primary btn-lg'

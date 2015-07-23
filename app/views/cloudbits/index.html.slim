@@ -1,2 +1,21 @@
-h1 Listing cloudbits
-= render @cloudbits
+.panel.panel-default
+  .panel-body
+    h2
+      = link_to t('.new_upload'), new_cloudbit_path, class: 'btn btn-primary'
+
+.panel.panel-default
+  .panel-body
+    .table-responsive
+      table.table.table-striped.table-hover.hover
+        thead
+          tr
+            th 
+              = t('.table.size')
+            th
+              = t('.table.name')
+            th
+              = t('.table.content_type')
+            th
+              = t('.table.options')
+        tbody
+          = render @cloudbits
