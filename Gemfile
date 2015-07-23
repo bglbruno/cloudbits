@@ -21,5 +21,6 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'dotenv-rails'
 end
 
