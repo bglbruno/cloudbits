@@ -13,6 +13,7 @@ gem 'paperclip', '~> 4.3'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'aws-sdk', '~> 1.6'
 
 group :development, :test do
   gem 'byebug'
