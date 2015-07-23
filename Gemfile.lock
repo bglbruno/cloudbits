@@ -165,7 +165,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.2.3)
-  rspec-rails
+  rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   spring
   turbolinks
