@@ -53,6 +53,6 @@ class CloudbitsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def cloudbit_params
-      params.require(:cloudbit).permit(:name)
+      params.require(:cloudbit).permit(:file)
     end
 end
