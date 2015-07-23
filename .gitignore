@@ -11,6 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
-*.swp
-*.swo
+*.sw[nop]
+.env
 /public/system
