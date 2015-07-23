@@ -6,16 +6,22 @@
 .panel.panel-default
   .panel-body
     .table-responsive
-      table.table.table-striped.table-hover.hover
-        thead
-          tr
-            th 
-              = t('.table.size')
-            th
-              = t('.table.name')
-            th
-              = t('.table.content_type')
-            th
-              = t('.table.options')
-        tbody
-          = render @cloudbits
+      - if @cloudbits.present?
+        table.table.table-striped.table-hover.hover
+          thead
+            tr
+              th 
+                = t('.table.size')
+              th
+                = t('.table.name')
+              th
+                = t('.table.content_type')
+              th
+                = t('.table.options')
+          tbody
+            = render @cloudbits
+      - else
+        .alert.alert-info role="alert"
+          = t('.no_files')
+
+
